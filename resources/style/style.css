@@ -311,7 +311,7 @@ h1 {
 
 .project-card-tpgw-phone-layer {
     height: auto;
-    transform: translateX(7%) translateY(-3%) translateZ(80px) scale(1.15);
+    transform: translateY(-10%) translateZ(80px);
 }
 
 @media screen and (min-width: 576px) {
