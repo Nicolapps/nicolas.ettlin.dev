@@ -2,3 +2,13 @@
 window.addEventListener('resize', function () {
     document.querySelectorAll('img[srcset]').forEach(img => img.src += '');
 });
+
+// Tilt effect
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (!prefersReducedMotion || !prefersReducedMotion.matches) {
+    VanillaTilt.init(document.querySelectorAll('.project-card'), {
+        glare: true,
+        'max-glare': .5,
+        gyroscope: false,
+    });
+}
