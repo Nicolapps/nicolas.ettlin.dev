@@ -3,24 +3,28 @@
     font-family: 'Open Sauce One';
     font-weight: 400;
     src: url(../fonts/OpenSauceOne-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Open Sauce One';
     font-weight: 600;
     src: url(../fonts/OpenSauceOne-SemiBold.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Open Sauce One';
     font-weight: 700;
     src: url(../fonts/OpenSauceOne-Bold.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Open Sauce One';
     font-weight: 400;
     font-style: italic;
+    font-display: swap;
     src: url(../fonts/OpenSauceOne-Italic.ttf);
 }
 
