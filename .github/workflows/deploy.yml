@@ -15,8 +15,3 @@ jobs:
         username: ${{ secrets.username }}
         password: ${{ secrets.ftp_password }}
         security: strict
-        exclude:
-          - **/.git*
-          - **/.git*/**
-          - **/node_modules/**
-          - README.md
