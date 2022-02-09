@@ -71,7 +71,7 @@ h1 {
 
 @media screen and (min-width: 576px) {
     .formatted-content {
-        max-width: 500px;
+        max-width: 580px;
     }
 
     .formatted-content h1 {
@@ -79,7 +79,7 @@ h1 {
     }
 
     .formatted-content p {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
@@ -93,7 +93,7 @@ h1 {
     }
 
     .formatted-content p {
-        font-size: 28px;
+        font-size: 22px;
     }
 }
 
@@ -107,7 +107,7 @@ h1 {
     }
 
     .formatted-content p {
-        font-size: 30px;
+        font-size: 24px;
     }
 }
 
@@ -203,7 +203,8 @@ h1 {
 /* Projects list */
 .section-projects {
     position: relative;
-    padding: 80px 15px;
+    padding: 15px;
+    padding-top: 60px;
     padding-bottom: 256px;
     background: linear-gradient(to bottom, white, #ebeef2);
 }
@@ -233,7 +234,7 @@ h1 {
 
 .project-card,
 .project-card > * {
-    border-radius: 16px;
+    border-radius: 24px;
 }
 
 .project-card::after { /* square ratio */
@@ -328,6 +329,10 @@ h1 {
         grid-template-columns: 1fr 1fr;
         grid-gap: 28px;
     }
+
+    .section-projects {
+        padding-top: 120px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -353,7 +358,7 @@ h1 {
 
     .project-card,
     .project-card > * {
-        border-radius: 32px;
+        border-radius: 36px;
     }
 
     .project-card-title {
@@ -378,7 +383,7 @@ h1 {
 
     .project-card,
     .project-card > * {
-        border-radius: 40px;
+        border-radius: 48px;
     }
 
     .project-card-title {
