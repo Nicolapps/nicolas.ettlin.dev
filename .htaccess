@@ -1,3 +1,9 @@
+# Redirect ettlin.dev to nicolas.ettlin.dev
+# based on https://stackoverflow.com/a/8699176/4652564
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^ettlin\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://nicolas.ettlin.%1%{REQUEST_URI} [R=301,QSA,NC,L]
+
 # Remove .html from URLs
 # https://stackoverflow.com/a/34726322/4652564
 RewriteEngine on
