@@ -12,3 +12,9 @@ if (!prefersReducedMotion || !prefersReducedMotion.matches) {
         gyroscope: false,
     });
 }
+
+// Language selector
+const languageSelect = document.querySelector('.language-select');
+languageSelect.addEventListener('change', () => {
+    window.location = `/${languageSelect.value}`;
+});

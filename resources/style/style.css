@@ -140,7 +140,7 @@ h1 {
 .section-hero-image {
     position: relative;
     background: #ebeef2;
-    height: 350px;
+    height: 400px;
     margin-bottom: -150px;
     z-index: -1;
 }
@@ -150,7 +150,7 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: top right;
     max-width: 2600px;
     margin: 0 auto;
 }
@@ -175,21 +175,21 @@ h1 {
 
 @media screen and (min-width: 576px) {
     .section-hero-image {
-        height: 450px;
+        height: 480px;
         margin-bottom: -200px;
     }
 }
 
 @media screen and (min-width: 768px) {
     .section-hero-image {
-        height: 600px;
+        height: 650px;
         margin-bottom: -300px;
     }
 }
 
 @media screen and (min-width: 992px) {
     .section-hero-image {
-        height: 70vw;
+        height: 72vw;
         margin-bottom: -30%;
     }
 }
@@ -198,6 +198,97 @@ h1 {
     .section-hero-image {
         margin-bottom: -35%;
     }
+}
+
+/* Main nav */
+.main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    padding: 16px 20px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding-bottom: 100px;
+    background: rgba(255, 255, 255, .4);
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 30%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 30%,
+        rgba(255, 255, 255, 0) 100%
+    );
+
+    -webkit-backdrop-filter: blur(32px);
+    backdrop-filter: blur(32px);
+}
+
+@media screen and (min-width: 768px) {
+    .main-nav::before {
+        padding-bottom: 160px;
+        background: rgba(255, 255, 255, .4);
+
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 1) 30%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        mask-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 1) 30%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+}
+
+.language-select {
+    position: relative;
+    z-index: 20;
+
+    appearance: none;
+    border: 0;
+    padding: 10px 16px;
+    padding-right: 36px;
+    border-radius: 8px;
+
+    color: inherit;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align-last: right;
+
+    background: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='w-5 h-5'%3E%3Cpath fill-rule='evenodd' d='M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z' clip-rule='evenodd' /%3E%3C/svg%3E%0A");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+
+    transition: .1s ease-in-out background-color, .1s ease-in-out box-shadow;
+}
+
+.language-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(71, 85, 105, .4);
 }
 
 /* Projects list */
