@@ -207,8 +207,7 @@ h1 {
     left: 0;
     width: 100%;
     z-index: 10;
-
-    padding: 16px 20px;
+    padding: 8px;
 
     display: flex;
     justify-content: flex-end;
@@ -242,7 +241,41 @@ h1 {
     backdrop-filter: blur(32px);
 }
 
-@media screen and (min-width: 768px) {
+.language-select {
+    position: relative;
+    z-index: 20;
+
+    appearance: none;
+    border: 0;
+    padding: 8px;
+    padding-right: 28px;
+    border-radius: 8px;
+
+    color: inherit;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align-last: right;
+
+    background: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='w-5 h-5'%3E%3Cpath fill-rule='evenodd' d='M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z' clip-rule='evenodd' /%3E%3C/svg%3E%0A");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+
+    transition: .1s ease-in-out background-color, .1s ease-in-out box-shadow;
+}
+
+.language-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(71, 85, 105, .4);
+}
+
+@media screen and (min-width: 576px) {
+    .main-nav {
+        padding: 16px 20px;
+        background-position: right 12px center;
+    }
+
     .main-nav::before {
         padding-bottom: 160px;
         background: rgba(255, 255, 255, .4);
@@ -260,35 +293,11 @@ h1 {
             rgba(255, 255, 255, 0) 100%
         );
     }
-}
 
-.language-select {
-    position: relative;
-    z-index: 20;
-
-    appearance: none;
-    border: 0;
-    padding: 10px 16px;
-    padding-right: 36px;
-    border-radius: 8px;
-
-    color: inherit;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align-last: right;
-
-    background: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='w-5 h-5'%3E%3Cpath fill-rule='evenodd' d='M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z' clip-rule='evenodd' /%3E%3C/svg%3E%0A");
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-
-    transition: .1s ease-in-out background-color, .1s ease-in-out box-shadow;
-}
-
-.language-select:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(71, 85, 105, .4);
+    .language-select {
+        padding: 10px 16px;
+        padding-right: 36px;
+    }
 }
 
 /* Projects list */
