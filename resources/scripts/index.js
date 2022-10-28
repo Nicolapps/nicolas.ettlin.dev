@@ -16,5 +16,6 @@ if (!prefersReducedMotion || !prefersReducedMotion.matches) {
 // Language selector
 const languageSelect = document.querySelector('.language-select');
 languageSelect.addEventListener('change', () => {
-    window.location = `/${languageSelect.value}`;
+    const folder = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+    window.location = `${folder}/${languageSelect.value}`;
 });
