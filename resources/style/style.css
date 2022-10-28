@@ -8,6 +8,13 @@
 
 @font-face {
     font-family: 'Open Sauce One';
+    font-weight: 500;
+    src: url(../fonts/OpenSauceOne-Medium.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sauce One';
     font-weight: 600;
     src: url(../fonts/OpenSauceOne-SemiBold.ttf);
     font-display: swap;
@@ -53,7 +60,7 @@ h1 {
     margin: 0;
 }
 
-.formatted-content {
+.container-margins {
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -513,4 +520,91 @@ h1 {
     .project-card-subtitle {
         font-size: 24px;
     }
+}
+
+/* Project page */
+.project-header {
+    background: lightpink;
+    padding-top: 400px;
+
+    display: grid;
+    gap: 36px;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+.project-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 576px) {
+    .project-header h1 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .project-header h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .project-header h1 {
+        font-size: 56px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .project-header {
+        grid-template-columns: auto auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .project-header > h1 {
+        grid-column: 1 / 3;
+    }
+
+    .project-header-intro {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .project-metadata {
+        width: 300px;
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+.project-header-intro > :first-child {
+    margin-top: 0;
+}
+
+.project-header-intro > :last-child {
+    margin-bottom: 0;
+}
+
+.project-fact {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.project-links {
+    font-size: 30px;
+}
+
+.project-technologies {
+    font-size: 24px;
+}
+
+.project-metadata h3 {
+    color: #1F2933;
+    font-size: 20px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: .6em 0;
 }
