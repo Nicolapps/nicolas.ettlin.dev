@@ -15,4 +15,4 @@ jobs:
                   username: ${{ secrets.username }}
                   password: ${{ secrets.ftp_password }}
                   security: strict
-                  server-dir: /home/clients/99e83dbed273a7c5edce92edcadfa692/sites/ettlin.dev
+                  server-dir: /home/clients/99e83dbed273a7c5edce92edcadfa692/sites/ettlin.dev/
